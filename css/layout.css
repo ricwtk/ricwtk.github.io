@@ -1,0 +1,107 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  min-height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+#site-head {
+  cursor: pointer;
+}
+
+#site-menu {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.menu-item {
+  text-align: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-sep {
+  display: flex;
+  padding: 0px 5px;
+  align-items: center;
+}
+
+.menu-sep::before {
+  content: "|";
+}
+
+#content-wrapper {
+  margin: 0px 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.contacts {
+  cursor: pointer;
+}
+
+#app-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 5px 0px;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 300px;
+  padding: 5px;
+  display: flex;
+}
+
+.app {
+  border: 1px solid;
+  text-align: center;
+}
+
+.app-title,
+.app-content {
+  padding: 30px;
+  text-align: left;
+}
+
+.app-title {
+  padding-bottom: 8px;
+}
+
+.app-content {
+  padding-top: 8px;
+}

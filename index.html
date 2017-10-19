@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF8">
+  <script src="js/vue.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="css/theme.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.6/showdown.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <site-head></site-head>
+    <site-menu></site-menu>
+  </header>
+
+  <div id="content-wrapper">
+    <div id="content" v-html="mainContent"></div>
+  </div>
+
+  <footer v-html="content"></footer>
+
+  <script src="vueComponents/site-head.js"></script>
+  <script src="vueComponents/site-menu.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
