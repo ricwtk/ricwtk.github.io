@@ -75,7 +75,7 @@ header {
 #app-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 5px 0px;
 }
