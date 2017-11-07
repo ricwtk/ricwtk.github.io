@@ -10,6 +10,10 @@ let appList = [{
   name: "Bible Verse LaTex Formatter",
   description: "[Not implemented ... yet] A web app to format Bible Verse to be included as part of a LaTex document.",
   url: null
+}, {
+  name: "Markdown Note",
+  description: "[Not implemented ... yet] A web app to create notes that support plain text, markdown syntax, and HTML syntax.",
+  url: null
 }];
 
 Vue.component("app-box", {
