@@ -4,7 +4,7 @@ let appList = [{
   url: "//addons.mozilla.org/en-GB/firefox/addon/sync-saved-windows/"
 }, {
   name: "Prayer Partners",
-  description: "A web app to allow users to create personal prayer items and share prayer items with others using Gmail and Google Drive App Folder. Work is in progress to use Amazon Web Services DynamoDB to remove the requirement of the permission to read emails in Gmail inbox.",
+  description: "A web app to allow users to create personal prayer items and share prayer items with others. One can sign up using a Google Plus or Facebook account. Amazon Web Services DynamoDB is used for database storage and communication between users.",
   url: "/prayerpartners"
 }, {
   name: "Bible Verse LaTex Formatter",
