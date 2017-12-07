@@ -1,7 +1,8 @@
 let appList = [{
   name: "Sync Saved Windows",
-  description: "A Mozilla Firefox add-on inspired by TabCloud to save opened windows and restore the windows. The feature to synchronise saved windows list across devices is yet to be implemented.",
-  url: "//addons.mozilla.org/en-GB/firefox/addon/sync-saved-windows/"
+  description: "An extension (Firefox and Chrome) to save opened windows and synchronise them across devices. Sync Saved Windows allows you to save your windows with multiple tabs and synchronise using your Google account. You no longer have to always leave the tabs open and you can organise your tabs into different windows.",
+  url: "/sync-saved-windows"
+
 }, {
   name: "Prayer Partners",
   description: "A web app to allow users to create personal prayer items and share prayer items with others. One can sign up using a Google Plus or Facebook account. Amazon Web Services DynamoDB is used for database storage and communication between users.",
@@ -19,7 +20,7 @@ let appList = [{
 Vue.component("app-box", {
   props: ['app'],
   methods: {
-    openurl: function () {
+    openurl: function() {
       if (this.app.url !== null)
         window.open(this.app.url, "_blank");
     }
