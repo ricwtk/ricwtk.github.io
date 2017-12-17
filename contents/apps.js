@@ -15,6 +15,10 @@ let appList = [{
   name: "Markdown Note",
   description: "[Not implemented ... yet] A web app to create notes that support plain text, markdown syntax, and HTML syntax.",
   url: null
+}, {
+  name: "Chord Book",
+  description: "[Not implemented ... yet]",
+  url: null
 }];
 
 Vue.component("app-box", {
