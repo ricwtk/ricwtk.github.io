@@ -2,7 +2,10 @@ let appList = [{
   name: "Sync Saved Windows",
   description: "An extension (Firefox and Chrome) to save opened windows and synchronise them across devices. Sync Saved Windows allows you to save your windows with multiple tabs and synchronise using your Google account. You no longer have to always leave the tabs open and you can organise your tabs into different windows.",
   url: "/sync-saved-windows"
-
+}, {
+  name: "Sync Bookmarks",
+  description: "An extension (Firefox and Chrome) to save websites as bookmarks and synchronise them across devices. You can now sync your bookmarks using your Google account.",
+  url: "/sync-bookmarks"
 }, {
   name: "Prayer Partners",
   description: "A web app to allow users to create personal prayer items and share prayer items with others. One can sign up using a Google Plus or Facebook account. Amazon Web Services DynamoDB is used for database storage and communication between users.",
