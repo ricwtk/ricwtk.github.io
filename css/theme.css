@@ -11,6 +11,11 @@ footer {
   color: white;
 }
 
+footer a:hover {
+  color: #607D8B;
+  background-color: white;
+}
+
 #site-head {
   font-family: 'Bree Serif', serif;
   font-size: 150%;

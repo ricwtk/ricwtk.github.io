@@ -1,9 +1,20 @@
 Vue.component("site-menu", {
   data: function () {
-    return {};
-  },
-  computed: {
-    sections: () => globalStore.pages
+    return {
+      sections: [{
+        title: "Home",
+        page: "home",
+        path: "home.js"
+        // }, {
+        //   title: "Posts",
+        //   page: "posts",
+        //   path: "posts.js"
+      }, {
+        title: "Apps",
+        page: "apps",
+        path: "apps.js"
+      }],
+    };
   },
   methods: {
     itemClass: function (item) {
