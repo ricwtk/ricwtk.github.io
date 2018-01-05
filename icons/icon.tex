@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[
+  paperheight=30cm,
+  paperwidth=30cm,
+  top=0mm,
+  margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc,angles}
+
+\begin{document}
+  \definecolor{bordercolor}{RGB}{255,255,255}%{96,125,139}
+  \definecolor{fillcolor}{RGB}{96,125,139}%{255,255,255}%{144,164,174}
+  \definecolor{sketchcolor}{RGB}{200,200,200}
+  \tikzset{
+    sketch/.style={sketchcolor,line width=1mm, dotted}
+  }
+  \centering
+  
+%  \resizebox{!}{28cm}{
+%    \begin{tikzpicture}[x=1cm,y=1cm]      
+%      \fill[fillcolor] (0,0) -- (3,0) -- (3,12) -- (0,12) -- cycle;
+%      \fill[fillcolor] ([shift=(0:4cm)]5,8) -- (9,0) -- ([shift=({-2*atan(10/4)}:4cm)]5,8) -- cycle;
+%      
+%      \draw[bordercolor,fill=fillcolor,line width=10mm] (5,8) circle (4cm);
+%    \end{tikzpicture}
+%  }
+%  \vspace*{\fill}
+%  \newpage
+
+%  \vspace*{\fill}
+  \resizebox{!}{30cm}{
+    \begin{tikzpicture}[x=1cm,y=1cm]        
+      \fill[fillcolor] (0,0) -- (3,0) -- 
+        ([shift=({180+acos(2/4.5)}:4.5cm)]5,8) arc (180+acos(2/4.5):180-asin(4/4.5):4.5cm) --
+        (3,12) -- (0,12) -- cycle;
+      \fill[fillcolor] (5,8) circle (3.5cm);
+      \fill[fillcolor] ([shift=({-acos(4/4.5)}:4.5cm)]5,8) arc (-acos(4/4.5):-(2*atan(10/4)-acos(4/4.5)):4.5cm) -- (9,0) -- cycle;
+      \fill[fillcolor] ([shift=({acos(4/4.5)}:4.5cm)]5,8) arc (acos(4/4.5):(90-acos(4/4.5)):4.5cm) -- (9,12) -- cycle;
+    \end{tikzpicture}
+  }
+%  \vspace*{\fill}
+  \newpage
+  \definecolor{fillcolor}{RGB}{255,255,255}
+  \resizebox{!}{30cm}{
+    \begin{tikzpicture}[x=1cm,y=1cm]        
+    \fill[fillcolor] (0,0) -- (3,0) -- 
+    ([shift=({180+acos(2/4.5)}:4.5cm)]5,8) arc (180+acos(2/4.5):180-asin(4/4.5):4.5cm) --
+    (3,12) -- (0,12) -- cycle;
+    \fill[fillcolor] (5,8) circle (3.5cm);
+    \fill[fillcolor] ([shift=({-acos(4/4.5)}:4.5cm)]5,8) arc (-acos(4/4.5):-(2*atan(10/4)-acos(4/4.5)):4.5cm) -- (9,0) -- cycle;
+    \fill[fillcolor] ([shift=({acos(4/4.5)}:4.5cm)]5,8) arc (acos(4/4.5):(90-acos(4/4.5)):4.5cm) -- (9,12) -- cycle;
+    \end{tikzpicture}
+  }
+\end{document}

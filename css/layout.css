@@ -29,6 +29,16 @@ header {
 
 #site-head {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#site-head img {
+  margin-right: 3px;
+}
+img { height: 1em; }
+.flex-row {
+  display: inline-flex;
+  align-items: center;
 }
 
 #site-menu {

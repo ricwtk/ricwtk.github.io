@@ -4,7 +4,7 @@ I am enthusiastic about coding, machine learning, and optimisation. My preferred
 
 If you are interested to ask me about my thesis, contact me for information about my developed [applications](?page=apps), or discuss opportunities with me, you can reach me through
 
-<center>`ricwtk [at] gmail.com`</center>
+<center><span class="flex-row"><img src="icons/icon.png">`ricwtk [at] gmail.com`</span></center>
 
 <center id="contacts">
   <a class="fa fa-facebook-official contacts" href="//www.facebook.com/richard.tk.wong" target="_blank"></a>

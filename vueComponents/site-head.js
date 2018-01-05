@@ -5,6 +5,6 @@ Vue.component("site-head", {
     }
   },
   template: `
-    <div id="site-head" @click="goHome()">R.ich.ard</div>
+    <div id="site-head" @click="goHome()"><img src="icons/icon-white.png">R.ich.ard</div>
   `
 })
