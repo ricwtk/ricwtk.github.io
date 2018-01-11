@@ -3,6 +3,15 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38752833-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-38752833-5');
+  </script>
   <meta charset="UTF8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://ricwtk.github.io">
@@ -13,7 +22,7 @@
   <meta name="keywords" content="Richard, Wong, Teck, Ken, TeckKen, Teckken, Tekken, Richard Wong">
   <link rel="icon" type="image/png" href="icons/icon.png?v=1.0">
 
-  <script src="js/vue.min.js"></script>
+  <script src="js/vue.js"></script>
   <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
   <link rel="stylesheet" type="text/css" href="css/theme.css" />
@@ -22,8 +31,7 @@
 
 <body>
   <header>
-    <site-head></site-head>
-    <site-menu></site-menu>
+    <site-header></site-header>
   </header>
 
   <div id="content-wrapper">
@@ -51,8 +59,8 @@
     <site-foot></site-foot>
   </footer>
 
-  <script src="vueComponents/site-head.js"></script>
-  <script src="vueComponents/site-menu.js"></script>
+  <script>var currentPage = "Home";</script>
+  <script src="vueComponents/site-header.js"></script>
   <script src="vueComponents/site-foot.js"></script>
   <script src="js/initiate-vue.js"></script>
 

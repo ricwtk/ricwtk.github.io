@@ -3,6 +3,14 @@
 <html>
 
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38752833-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-38752833-5');
+  </script>
   <meta charset="UTF8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://ricwtk.github.io">
@@ -22,8 +30,7 @@
 
 <body>
   <header>
-    <site-head></site-head>
-    <site-menu></site-menu>
+    <site-header></site-header>
   </header>
 
   <div id="content-wrapper">
@@ -38,8 +45,8 @@
     <site-foot></site-foot>
   </footer>
 
-  <script src="vueComponents/site-head.js"></script>
-  <script src="vueComponents/site-menu.js"></script>
+  <script>var currentPage = "Apps";</script>
+  <script src="vueComponents/site-header.js"></script>
   <script src="vueComponents/site-foot.js"></script>
   <script src="vueComponents/app-box.js"></script>
   <script src="js/initiate-vue.js"></script>

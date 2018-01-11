@@ -27,27 +27,12 @@ header {
   top: 0;
 }
 
-#site-head {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-#site-head img {
-  margin-right: 3px;
-}
 img { height: 1em; }
 .flex-row {
   display: inline-flex;
   align-items: center;
 }
-
-#site-menu {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  justify-content: flex-end;
-}
-
+/*
 .menu-item {
   text-align: center;
   cursor: pointer;
@@ -58,11 +43,7 @@ img { height: 1em; }
   display: flex;
   padding: 0px 5px;
   align-items: center;
-}
-
-.menu-sep::before {
-  content: "|";
-}
+} */
 
 #content-wrapper {
   margin: 0px 10px;
