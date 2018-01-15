@@ -72,9 +72,15 @@ a:hover {
   box-shadow: 0 2px 2px 0 #90A4AE;
 }
 
+.app:hover {
+  box-shadow: 0 2px 2px 2px #90A4AE;
+}
+
 .app-title {
   /* border-bottom: 1px solid #ECEFF1; */
   /* font-weight: bold; */
+  background-color: #607D8B;
+  color: white;
   font-size: 130%;
   cursor: pointer;
 }
@@ -82,4 +88,9 @@ a:hover {
 .app-title:hover {
   background-color: #607D8B;
   color: white;
+}
+
+.app-title img {
+  background-color: white;
+  border-radius: 5px;
 }

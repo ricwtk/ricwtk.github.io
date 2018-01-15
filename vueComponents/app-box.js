@@ -9,7 +9,7 @@ Vue.component("app-box", {
   template: `
     <div class="app-wrapper">
       <div class="app">
-        <div class="app-title" @click="openurl()">{{ app.name }}</div>
+        <div class="app-title" @click="openurl()" v-html="app.name"></div>
         <div class="app-content">{{ app.description }}</div>
       </div>
     </div>
