@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300|Bree+Serif|Roboto+Mono:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Bree+Serif|Roboto+Mono:300');
 html,
 body {
   font-family: 'Roboto Slab', serif;
@@ -103,4 +103,14 @@ a:hover {
   background-color: #80CBC4;
   animation-name: rotating;
   animation-duration: .5s;
+}
+
+.app-tags {
+  font-family: "Bree serif";
+}
+.app-tag {
+  color: #fff;
+  background-color: #bbb;
+  font-size: 95%;
+  font-weight: bold;
 }
