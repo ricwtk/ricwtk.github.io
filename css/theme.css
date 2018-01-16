@@ -69,11 +69,11 @@ a:hover {
 .app {
   border-radius: 2px;
   border-color: #B0BEC5;
-  box-shadow: 0 2px 2px 0 #90A4AE;
+  box-shadow: 0 2px 2px 1px #B0BEC5;
 }
 
 .app:hover {
-  box-shadow: 0 2px 2px 2px #90A4AE;
+  box-shadow: 0 2px 2px 1px #455A64;
 }
 
 .app-title {
@@ -82,15 +82,25 @@ a:hover {
   background-color: #607D8B;
   color: white;
   font-size: 130%;
-  cursor: pointer;
-}
-
-.app-title:hover {
-  background-color: #607D8B;
-  color: white;
 }
 
 .app-title img {
   background-color: white;
   border-radius: 5px;
+}
+
+.app-action {
+  color: #fff;
+  background-color: #4DB6AC;
+  cursor: pointer;
+  transition: all 1s;
+}
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(3600deg); }
+}
+.app-action:hover {
+  background-color: #80CBC4;
+  animation-name: rotating;
+  animation-duration: .5s;
 }
