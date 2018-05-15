@@ -32,6 +32,9 @@ Vue.component("app-box", {
       </div>
       <div class="app-details" v-if="showDetails">
         {{ app.description }}
+        <div class="app-tags" v-if="app.tags">
+          <span class="app-tag" v-for="tag in app.tags" v-html="tag"></span>
+        </div>
       </div>
     </div>
   `

@@ -116,12 +116,11 @@ a:hover {
 
 .app-wrapper:nth-child(odd) > .app-head {
   background-color: #607D8B;
-  color: #E0F2F1;
+  color: white;
 }
 
 .app-wrapper:nth-child(even) > .app-head {
   background-color: #E0F2F1;
-  color: #607D8B;
 }
 
 .app-wrapper:nth-child(odd) > .app-details {
@@ -137,4 +136,19 @@ a:hover {
 .app-icon {
   border-radius: .5rem;
   background-color: white;
+}
+
+.app-tag {
+  padding: .2rem .5rem;
+  margin: .2rem;
+  border-radius: 2rem;
+}
+
+.app-wrapper:nth-child(odd) .app-tag {
+  background-color: #607D8B;
+  color: white;
+}
+
+.app-wrapper:nth-child(even) .app-tag {
+  background-color: #E0F2F1;
 }
