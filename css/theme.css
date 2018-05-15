@@ -66,7 +66,7 @@ a:hover {
   color: inherit;
 }
 
-.app {
+/* .app {
   border-radius: 2px;
   border-color: #B0BEC5;
   box-shadow: 0 2px 2px 1px #B0BEC5;
@@ -77,8 +77,6 @@ a:hover {
 }
 
 .app-title {
-  /* border-bottom: 1px solid #ECEFF1; */
-  /* font-weight: bold; */
   background-color: #607D8B;
   color: white;
   font-size: 130%;
@@ -113,4 +111,30 @@ a:hover {
   background-color: #bbb;
   font-size: 95%;
   font-weight: bold;
+} */
+
+
+.app-wrapper:nth-child(odd) > .app-head {
+  background-color: #607D8B;
+  color: #E0F2F1;
+}
+
+.app-wrapper:nth-child(even) > .app-head {
+  background-color: #E0F2F1;
+  color: #607D8B;
+}
+
+.app-wrapper:nth-child(odd) > .app-details {
+  border: 2px solid #607D8B;
+  border-top: 0px;
+}
+
+.app-wrapper:nth-child(even) > .app-details {
+  border: 2px solid #E0F2F1;
+  border-top: 0px;
+}
+
+.app-icon {
+  border-radius: .5rem;
+  background-color: white;
 }
