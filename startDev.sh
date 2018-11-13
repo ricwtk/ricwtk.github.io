@@ -1,5 +1,5 @@
 #!/bin/bash
-code ./ &
+# code ./ &
 
 openport=8000
 check_avail_port() {
@@ -15,5 +15,5 @@ check_avail_port() {
 
 check_avail_port
 
-/opt/firefox-dev/firefox --devtools -P Test --new-window localhost:$openport &
+# firefox --devtools -P Test --new-window localhost:$openport &
 python -m SimpleHTTPServer $openport

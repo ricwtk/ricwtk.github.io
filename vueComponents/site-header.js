@@ -1,6 +1,7 @@
 Vue.component("site-header", {
   data: function () {
     return {
+      hostname: window.location.origin,
       style: {
         wrapper: {
           "display": "flex",
@@ -32,13 +33,15 @@ Vue.component("site-header", {
       sections: [{
         title: "Home",
         page: "/"
-        // }, {
-        //   title: "Posts",
-        //   page: "posts",
-        //   path: "posts.js"
+      }, {
+        title: "Calendar",
+        page: "calendar"
       }, {
         title: "Apps",
         page: "/apps"
+      // }, {
+      //   title: "Posts",
+      //   page: "/posts"
       }],
     };
   },
@@ -66,7 +69,7 @@ Vue.component("site-header", {
   },
   template: `
   <div :style="style.wrapper">
-    <div id="site-head" :style="style.title" @click="goHome()"><img src="icons/icon-white.png" :style="style.img">R.ich.ard</div>
+    <div id="site-head" :style="style.title" @click="goHome()"><img :src="hostname+'/icons/icon-white.png'" :style="style.img">R.ich.ard</div>
     <div id="site-menu" :style="style.menu">
       <template v-for="(section, index) in sections">
         <div :class="itemClass(section)" @click="goto(section.page)" :style="style.menuItem">{{ section.title }}</div>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38752833-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-38752833-5');
+  </script>
+  <meta charset="UTF8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="https://ricwtk.github.io">
+  <meta property="og:title" content="R.ich.ard">
+  <meta property="og:description" content="Personal website for Richard Wong">
+  <title>R.ich.ard</title>
+  <meta name="description" content="Personal website for Richard Wong">
+  <meta name="keywords" content="Richard, Wong, Teck, Ken, TeckKen, Teckken, Tekken, Richard Wong">
+  <link rel="icon" type="image/png" href="icons/icon.png?v=1.0">
+
+  <script src="../js/vue.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../css/theme.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.6/showdown.min.js"></script>
+
+  <style>
+    .dates {
+      color: #aaa;
+    }
+
+    .post-item {
+      margin-left: 5em;
+      position: relative;
+      padding: 1em 2em 1em;
+      border-left: 2px solid #607D8B;
+    }
+
+    .dates {
+      font-weight: bold;
+      font-weight: 700;
+      font-size: .75rem;
+    }
+
+    .title {
+      cursor: pointer;
+      /* padding: 2px 1px 2px; */
+      padding: 1px 0px;
+    }
+
+    .title:hover {
+      background-color: rgb(96,125,139,.05);
+    }
+
+    .post-item::before {
+      content: attr(year-is);
+      position: absolute;
+      top: 1em;
+      left: -4em;
+      font-size: .9rem;
+      font-weight: bold;
+    }
+    
+    .post-item::after {
+      width: 15px;
+      height: 15px;
+      display: block;
+      top: 1em;
+      position: absolute;
+      left: -9px;
+      border-radius: .75rem;
+      content: "";
+      border: 1px solid #607D8B;
+      background: #fff;
+    }
+
+    .post-item:nth-child(odd)::after {
+      background: #607D8B;
+    }
+
+    .post-item:first-child {
+      border-image: linear-gradient(to top, #607D8B 60%, rgba(0,0,0,0)) 1 100%;
+    }
+    .post-item:last-child {
+      border-image: linear-gradient(to bottom, #607D8B 60%, rgba(0,0,0,0)) 1 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <site-header></site-header>
+  </header>
+
+  <div id="content-wrapper">
+    <div id="content">
+      <div id="post-list">
+        <div v-for="(post, index) in postList" class="post-item" :year-is="getyear(index)">
+          <div class="dates"><span v-html="getdatetime(post.createdOn)"></span></div>
+          <div class="title" @click="openPost(post.name)" v-html="converter.makeHtml(post.title)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <site-foot></site-foot>
+  </footer>
+
+  <script>var currentPage = "Posts";</script>
+  <script src="../vueComponents/site-header.js"></script>
+  <script src="../vueComponents/site-foot.js"></script>
+  <script src="../js/initiate-vue.js"></script>
+  <script src="./post-summary.js"></script>
+  <script>
+    new Vue({
+      el: "#post-list",
+      data: {
+        postList: postSummary,
+        converter: new showdown.Converter()
+      },
+      methods: {
+        openPost: function (name) {
+          window.open(name, "_self");
+        },
+        getdatetime: function (dateString) {
+          const MON = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+          let dtObj = new Date(dateString);
+          return MON[dtObj.getMonth()] + " " + dtObj.getDate() + "   " + dtObj.getHours() + ":" + dtObj.getMinutes();
+        },
+        getyear: function (index) {
+          if (index == 0 || this.postList[index-1].createdOn.substr(0,4) !== this.postList[index].createdOn.substr(0,4)) {
+            return this.postList[index].createdOn.substr(0,4);
+          } else {
+            return "";
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
