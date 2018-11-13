@@ -28,6 +28,15 @@
   <link rel="stylesheet" type="text/css" href="css/layout.css" />
   <link rel="stylesheet" type="text/css" href="css/theme.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.6/showdown.min.js"></script>
+
+  <style>
+    #cal {
+      border-width: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -36,9 +45,9 @@
   </header>
 
   <div id="content-wrapper">
-    <div id="content">
-      <iframe id="cal" src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=richardwtk%40sunway.edu.my&amp;color=%231B887A&amp;src=ricwtk%40gmail.com&amp;color=%2342104A&amp;ctz=Asia%2FKuala_Lumpur" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
+    <!-- <div id="content"> -->
+      <iframe id="cal" src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=richardwtk%40sunway.edu.my&amp;color=%231B887A&amp;src=ricwtk%40gmail.com&amp;color=%2342104A&amp;ctz=Asia%2FKuala_Lumpur" scrolling="no"></iframe>
+    <!-- </div> -->
   </div>
 
   <footer>
@@ -51,7 +60,6 @@
   <script src="js/initiate-vue.js"></script>
 
   <script>
-    var cal = document.querySelector("#cal");
   </script>
 </body>
 
