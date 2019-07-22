@@ -39,6 +39,9 @@ Vue.component("site-header", {
       }, {
         title: "Apps",
         page: "/apps"
+      }, {
+        title: "Students",
+        page: "/students"
       // }, {
       //   title: "Posts",
       //   page: "/posts"

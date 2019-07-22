@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta name="google-site-verification" content="d_76nSOuhpTdqn_6IJVDfLO76UO0p3XaM8h69XzymeM" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38752833-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-38752833-5');
+  </script>
+  <meta charset="UTF8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url" content="https://ricwtk.github.io">
+  <meta property="og:title" content="R.ich.ard">
+  <meta property="og:description" content="Personal website for Richard Wong">
+  <title>R.ich.ard</title>
+  <meta name="description" content="Personal website for Richard Wong">
+  <meta name="keywords" content="Richard, Wong, Teck, Ken, TeckKen, Teckken, Tekken, Richard Wong">
+  <link rel="icon" type="image/png" href="icons/icon.png?v=1.0">
+
+  <script src="js/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="css/theme.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.6/showdown.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <site-header></site-header>
+  </header>
+
+  <div id="content-wrapper">
+    <div id="content">
+      <div v-for="level,l in levels" v-if="students.filter(x => x.level == l).length > 0">
+        <h2>{{ level }} Students</h2>
+        <div v-for="stud,s in students.filter(x => x.level == l)">
+          {{ stud.title }}
+          <br>
+          {{ stud.name }}&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <site-foot></site-foot>
+  </footer>
+
+  <script>var currentPage = "Students";</script>
+  <script src="vueComponents/site-header.js"></script>
+  <script src="vueComponents/site-foot.js"></script>
+  <script src="js/initiate-vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: "#content",
+      data: {
+        months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        levels: ['PhD', 'Master', 'Undergraduate'],
+        students: [
+          {
+            name: "Henry Heng",
+            title: "Resource Management for Fog Computing in Smart Transportation System",
+            level: 1,
+            from: new Date(2019, 0, 1),
+            finish: null,
+          },
+          {
+            name: "Lim Kheng",
+            title: "Agent based Modelling Traffic Simulator",
+            level: 2,
+            from: new Date(2018, 7, 1),
+            finish: new Date(2019, 6, 1)
+          },
+          {
+            name: "Tai Zi Hang",
+            title: "GPS Estimation Algorithm for Inconsistent Signal Reception",
+            level: 2,
+            from: new Date(2018, 7, 1),
+            finish: new Date(2019, 6, 1)
+          },
+          {
+            name: "Kam Bi Li",
+            title: "Investigating the Effect of Weather on Prediction of Bus Speed using Artificial Neural Networks",
+            level: 2,
+            from: new Date(2018, 7, 1),
+            finish: new Date(2019, 6, 1)
+          },
+          {
+            name: "Lishan Abbas",
+            title: "Web based Traffic Simulation with Pedestrians and Other Miscellaneous Entities",
+            level: 2,
+            from: new Date(2018, 7, 1),
+            finish: new Date(2019, 6, 1)
+          },
+          {
+            name: "Chendra Putera Samara",
+            title: "Adaptive Path Planning in Multi Robot Environment using ACO based Algorithm",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Lim Hui Zhi",
+            title: "Adaptive Routing of City Navigation for Traffic Management",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Swaroop Punnoose M. Kovoor",
+            title: "A Human Like Artificial Intelligence in a 3D First Person Shooter Game",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Tan Chin Yik",
+            title: "Control Strategies of Traffic Lights at Adjacent Junctions for Traffic Management",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Lee Chin Shen",
+            title: "Disparity Mapping of Stereo Images for Mobile Robot Path Planning",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Ma Khai Yew",
+            title: "Facial Emotion Detection using Machine Learning for Driver Monitoring with Voice Feedback",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Tan Guan King",
+            title: "Offline Handwriting Recognition on Examination Scripts using Machine Learning",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+          {
+            name: "Leong Kai Xiang",
+            title: "Real Time Indoor GPS Navigation using BLE Beacons",
+            level: 2,
+            from: new Date(2019, 2, 1),
+            finish: null
+          },
+        ]
+      }
+    })
+  </script>
+</body>
+
+</html>
