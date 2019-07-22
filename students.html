@@ -39,12 +39,15 @@
     <div id="content">
       <div v-for="level,l in levels" v-if="students.filter(x => x.level == l).length > 0">
         <h2>{{ level }} Students</h2>
-        <div v-for="stud,s in sortTimeAndName(students.filter(x => x.level == l))">
-          {{ stud.title }}
-          <br>
-          {{ stud.name }}&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
-          <br>
-          <br>
+        <div v-for="from,f in reverseSort(students.filter(x => x.level == l).reduce((acc,x) => acc.includes(x.from.getFullYear()) ? acc : acc.concat(x.from.getFullYear()), []))">
+          <h3>{{ from }}</h3>
+          <div v-for="stud,s in sortTimeAndName(students.filter(x => x.level == l && x.from.getFullYear() == from))">
+            {{ stud.title }}
+            <br>
+            {{ stud.name }}&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
+            <br>
+            <br>
+          </div>
         </div>
       </div>
     </div>
@@ -159,6 +162,10 @@
         ]
       },
       methods: {
+        reverseSort: function (arr) {
+          arr.sort((a,b) => b - a);
+          return arr;
+        },
         sortTimeAndName: function (arr) {
           arr.sort((a,b) => a.name.localeCompare(b.name));
           arr.sort((a,b) => b.from - a.from);
