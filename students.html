@@ -44,7 +44,7 @@
           <div v-for="stud,s in sortTimeAndName(students.filter(x => x.level == l && x.from.getFullYear() == from))">
             {{ stud.title }}
             <br>
-            {{ stud.name }}&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
+            <b>{{ stud.name }}</b>&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
             <br>
             <br>
           </div>
