@@ -44,7 +44,7 @@
           <div v-for="stud,s in sortTimeAndName(students.filter(x => x.level == l && x.from.getFullYear() == from))">
             {{ stud.title }}
             <br>
-            {{ stud.name }}&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
+            <b>{{ stud.name }}</b>&nbsp;({{ stud.from.getFullYear() + ' ' + months[stud.from.getMonth()] }} - {{ stud.finish ? stud.finish.getFullYear() + ' ' + months[stud.finish.getMonth()] : "Now" }})
             <br>
             <br>
           </div>
@@ -115,14 +115,14 @@
             title: "Adaptive Routing of City Navigation for Traffic Management",
             level: 2,
             from: new Date(2019, 2, 1),
-            finish: null
+            finish: new Date(2019, 11, 1)
           },
           {
             name: "Swaroop Punnoose M. (Jake) Kovoor",
             title: "A Human Like Artificial Intelligence in a 3D First Person Shooter Game",
             level: 2,
             from: new Date(2019, 2, 1),
-            finish: null
+            finish: new Date(2019, 11, 1)
           },
           {
             name: "Tan Chin Yik",
@@ -136,14 +136,14 @@
             title: "Disparity Mapping of Stereo Images for Mobile Robot Path Planning",
             level: 2,
             from: new Date(2019, 2, 1),
-            finish: null
+            finish: new Date(2019, 11, 1)
           },
           {
             name: "Ma Khai Yew",
             title: "Facial Emotion Detection using Machine Learning for Driver Monitoring with Voice Feedback",
             level: 2,
             from: new Date(2019, 2, 1),
-            finish: null
+            finish: new Date(2019, 11, 1)
           },
           {
             name: "Tan Guan King",
@@ -157,7 +157,7 @@
             title: "Real Time Indoor GPS Navigation using BLE Beacons",
             level: 2,
             from: new Date(2019, 2, 1),
-            finish: null
+            finish: new Date(2019, 11, 1)
           },
           {
             name: "Dennis Lee Yee Hao",
