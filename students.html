@@ -54,7 +54,13 @@
           <div v-for="stud,s in sortTimeAndName(students.filter(x => x.level == l && x.period[0].getFullYear() == from))">
             {{ stud.title }}
             <br>
-            <b>{{ stud.name }}</b>&nbsp;({{ getPeriodDisplay(stud.period) }})
+            <span v-if="stud.link">
+              <a :href="stud.link" target="_blank"><b>{{ stud.name }}</b>&nbsp;<b class="fa fa-link"></b></a>
+            </span>
+            <span v-else>
+              <b>{{ stud.name }}</b>
+            </span>
+            &nbsp;({{ getPeriodDisplay(stud.period) }})
             <br>
             <br>
           </div>
@@ -344,6 +350,7 @@
           },
           {
             name: "Leo Paul Larkin",
+            link: "https://leo.notsosrs.com/",
             title: "Optimisation of demand-based pricing for parking system",
             level: 2,
             period: [new Date(2021, 7, 1)]
