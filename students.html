@@ -41,9 +41,9 @@
         <h2>{{ level }}</h2>
         <div v-for="item,i in prependlist.filter(x => x.level == l)">
           P{{ i+1 }}&nbsp;&nbsp;<b>{{ item.title }}</b>
-          <br>
+          <br v-if="item.description">
           {{ item.description }}
-          <br>
+          <br v-if="item.description">
           <br>
         </div>
       </div>
