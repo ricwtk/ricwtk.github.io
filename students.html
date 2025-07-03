@@ -52,8 +52,6 @@
         <div v-for="from,f in reverseSort(students.filter(x => x.level == l).reduce((acc,x) => acc.includes(x.period[0].getFullYear()) ? acc : acc.concat(x.period[0].getFullYear()), []))">
           <h3>{{ from }}</h3>
           <div v-for="stud,s in sortTimeAndName(students.filter(x => x.level == l && x.period[0].getFullYear() == from))">
-            {{ stud.title }}
-            <br>
             <span v-if="stud.link">
               <a :href="stud.link" target="_blank"><b>{{ stud.name }}</b>&nbsp;<b class="fa fa-link"></b></a>
             </span>
@@ -63,9 +61,11 @@
             &nbsp;({{ getPeriodDisplay(stud.period) }})
             <br>
             <template v-if="stud.programme">
-              <small>&nbsp;&nbsp;{{ programmes[stud.programme] }}</small>
+              <small style="padding-left: 3em;">{{ programmes[stud.programme] }}</small>
               <br>
             </template>
+            <span style="padding-left: 3em;">{{ stud.title }}</span>
+            <br>
             <br>
           </div>
         </div>
