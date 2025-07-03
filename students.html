@@ -62,6 +62,10 @@
             </span>
             &nbsp;({{ getPeriodDisplay(stud.period) }})
             <br>
+            <template v-if="stud.programme">
+              <span>{{ programmes[stud.programme] }}</span>
+              <br>
+            </template>
             <br>
           </div>
         </div>
@@ -83,6 +87,18 @@
       data: {
         months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         levels: ['PhD', 'Master', 'Undergraduate'],
+        programmes: {
+         "PCOM": "Doctor of Philosophy (Computing)",
+         "MCS": "Master of Science in Computer Science",
+         "MDS": "Master in Data Science",
+         "MSDM": "Master in Sustainable Development Management",
+         "BEEE": "Bachelor of Electronic and Electrical Engineering with Honours",
+         "BCS": "Bachelor of Science (Honours) in Computer Science",
+         "BSE": "Bachelor of Software Engineering (Hons)",
+         "BIT": "Bachelor of Science (Honours) in Information Technology",
+         "BSDA": "Bachelor of Information Systems (Honours) (Data Analytics)",
+         "BCNS": "BSc (Hons) Information Technology (Computer Networking and Security)",
+        },
         students: [
           {
             name: "Henry Heng",
@@ -353,12 +369,14 @@
             link: "https://leo.notsosrs.com/",
             title: "Optimisation of demand-based pricing for parking system",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 7, 1)]
           },
           {
             name: "Ian How Yu Xuan",
             title: "Pattern formation algorithm with collaborative robots",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 11, 1)]
           },
           {
@@ -366,168 +384,196 @@
             link: "https://github.com/SpaceGliderr",
             title: "Navigation algorithm for collaborative robots in indoor environment with obstacles",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 7, 1)]
           },
           {
             name: "Raveesh Shibchurn",
             title: "Driving behaviour analysis on lane changing behaviour",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 7, 1)]
           },
           {
             name: "Yutashna Gunnoo",
             title: "Driving behaviour analysis for roundabouts entry behaviour",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 7, 1)]
           },
           {
-            name: "Yan Yi Cheng",
+            name: "Yan Yi Cheng (John)",
             title: "Driving behaviour analysis on approaching yellow traffic light signal",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 7, 1)]
           },
           {
             name: "Muhammad Nabeel Rasheed Varsally",
             title: "Demand-based adaptive routing algorithm",
             level: 2,
+            programme: "BCS",
             period: [new Date(2021, 7, 1), new Date(2022, 7, 1)]
           },
           {
             name: "Byron Young Meng Keen",
             title: "Multiple travelling salesmen problem with evolutionary algorithm",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Jonathan Yap Ren Jie",
             title: "Efficiency evaluation of cross junction with and without traffic lights",
             level: 2,
-            period: [new Date(2022, 3, 1)]
+            programme: "BCS",
+            period: [new Date(2022, 3, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Justin Teh Zi-Vern",
             title: "Abnormality detection in driver behaviour on highways (simulation for data collection)",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Khoo Teng Eik",
             title: "Speaker recognition with different background noise environments",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Marcus Wong Ke Lun",
             title: "Abnormality detection in driver behaviour on city roads (simulation for data collection)",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Saurabh Varughese M. Kovoor",
             title: "Heart Disease Prediction Algorithm Using Machine Learning Techniques",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Soh Xuan Wei",
             title: "Bluetooth-based ad-hoc network for swarm robotics",
             level: 2,
+            programme: "BCNS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Vivian Chan Weng Hei",
             title: "Wireless ad-hoc network for swarm robotics",
             level: 2,
+            programme: "BCNS",
             period: [new Date(2022, 3, 1), new Date(2022, 11, 1)]
           },
           {
             name: "Yew Ther Ming",
             title: "Traffic light control for multi-junction traffic light system with an evolutionary algorithm",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Ben Lam Hao Cheng",
             title: "Traffic light control for multi-junction traffic light system with reinforcement learning",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Benjamin Ooi Joon Ming",
             title: "Control for traffic light system in large roundabouts with an evolutionary algorithm",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Chow Wen Xuan",
             title: "Control for traffic light system in large roundabouts with reinforcement learning",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Yap Xiao Kang",
             title: "Research-centric traffic simulator development",
             level: 2,
+            programme: "BSE",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Jeremy Lim Shih Wen",
             title: "Research-centric simulator for swarm robotic system",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Tan Yong Jern",
             title: "Routing optimisation in traffic network using reinforcement learning",
             level: 2,
+            programme: "BSDA",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Leong Ching Xuen",
             title: "Automatic Identification and Extraction of Room Categories in Floor Plans",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Lilian Ung Wei Fang",
             title: "Unknown object detection and avoidance in a predefined map for robotic navigation",
             level: 2,
+            programme: "BCS",
             period: [new Date(2022, 7, 1), new Date(2023, 7, 1)]
           },
           {
             name: "Soong Jia Le",
             title: "Adapting LLM for traffic incident detection",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Eu Yu Han",
             title: "Sunway Group Human Resource (GHR) project",
             level: 2,
+            programme: "BSE",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Yslam Orazov",
             title: "2D shape formation algorithm for programmable particles",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Tan Pee Aun",
             title: "Shape transition path planning for programmable particles",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Teh Jun Hao",
             title: "Traffic incident detection with sound recognition for on-board dashcam",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Kwan Jia Chi",
             title: "Speaker number recognition from recorded soundtrack",
             level: 2,
+            programme: "BSE",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
@@ -535,192 +581,238 @@
             link: "https://github.com/YennyTeo",
             title: "Recipe sharing and recommendation system",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Cheah Khai Jake",
             title: "Route optimisation to minimise energy consumption with reinforcement learning using CARLA as simulation environment",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Ng Hong Ming",
             title: "Optimised UI and UX design for browser-based smart home control application",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Alex Low Kwok Chung",
             title: "Event recommendation algorithm for a social platform",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Kirthyiban Nair",
             title: "Interest matching algorithm for a social platform",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Gan Rong Shen",
             title: "Product recommendation algorithm for peer-to-peer marketplace",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 3, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Lim Sheng Tao",
             title: "Optimisation of train station connectivity in Klang valley",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 8, 1), new Date(2024, 7, 1)]
           },
           {
             name: "Chin Yu Wei",
             title: "Optimisation of signalised roundabouts under the existence of non-ideal driving behaviours",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 8, 1), new Date(2024, 7, 1)]
           },
           {
             name: "Chuah Pei-Ngwen",
             title: "Optimisation of utilising roundabouts and fixed-timing traffic light for multi-junction transport network",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 8, 1), new Date(2024, 7, 1)]
           },
           {
             name: "Kho Zi Jian",
             title: "Reinforcement learning for swarm robots indoor navigation with unknown obstacles",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 8, 1), new Date(2024, 7, 1)]
           },
           {
             name: "Yap Yu Heng",
             title: "Environmental mapping with swarm robots with single directional ultrasonic sensors",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 8, 1), new Date(2024, 7, 1)]
           },
           {
             name: "Tee Meng Kiat",
             title: "Driving optimisation of autonomous vehicles with route sharing",
             level: 2,
+            programme: "BCS",
             period: [new Date(2023, 8, 1), new Date(2024, 7, 1)]
           },
           {
             name: "Yap Wei Xiang",
             title: "Evaluation of nature-inspired optimisation algorithms in solving Versus Tetris",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 3, 1), new Date(2025, 0, 1)]
           },
           {
             name: "Chong Yu Cheng",
             title: "Exploratory Development of Generative AI for BIM Clash Coordination",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 3, 1), new Date(2025, 0, 1)]
           },
           {
             name: "Chen Wei Lun",
             title: "Advanced AI Techniques for Customer Sentiment Analysis in Real Estate Communications",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 3, 1), new Date(2025, 0, 1)]
           },
           {
             name: "Benjamin Choon Han Wen",
             title: "AI-Driven User Interaction for Autodesk Construction Cloud",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 3, 1), new Date(2025, 0, 1)]
           },
           {
             name: "Asilbek Abdullaev",
             title: "A Blockchain Voting Platform for secure and transparent intra-organization decision-making processes",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 3, 1), new Date(2025, 0, 1)]
           },
           {
             name: "Bowie Chew Zheng Hong",
             title: "IoT-Enabled Database System for Sensor-Driven Plant Care Optimization and Predictive Analysis",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 8, 1)]
           },
           {
             name: "Lai Chun Hoong",
             title: "Automated Brain Tumor Detection from MRI Scans Using Machine Learning and Computer Vision Techniques",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 8, 1)]
           },
           {
             name: "Eason Lim Yi Hong",
             title: "AI-Enhanced Lecture Notes: Automatic Note Generation from Video and Text",
             level: 2,
+            programme: "BSE",
             period: [new Date(2024, 8, 1)]
           },
           {
             name: "Cobra Lim Zen Hong",
             title: "Efficient Edge Programming for Multi-Plant Sensor Data Communication in Environmental Monitoring System",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 8, 1)]
           },
           {
             name: "Wong Yi Hung",
             title: "Intelligent Flood Response and Resource Allocation Using Data-Driven Approaches",
             level: 2,
+            programme: "BCS",
             period: [new Date(2024, 8, 1)]
           },
           {
             name: "Chan Kah Gin",
-            title: "",
+            title: "Personalised Travel Itinerary Optimization and Recommendations",
             level: 2,
+            programme: "BCS",
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Ong Ze Ming",
-            title: "",
+            title: "Concrete strength analysis and prediction for quality control using machine learning",
             level: 2,
+            programme: "BSE",
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Owen Tay Khai Hung",
-            title: "",
+            title: "Automated task sorting with priority classification using machine learning approach",
             level: 2,
+            programme: "BSE",
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Shayne Lim Yi Xuan",
-            title: "",
+            title: "ECG Classification for Arrythmia Detection",
             level: 2,
+            programme: "BCS",
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Mohammed Moatasem Faisal Al-Attraqchi",
-            title: "",
+            title: "From Awareness to Adoption: Designing an AI Technology Adoption Framework for Residential Energy Efficiency in Malaysia",
             level: 2,
+            programme: "BCS",
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Khoo Yi Xuan (Dylan)",
-            title: "",
+            title: "Phishing Attack Detection on Messaging Platforms Using Machine Learning",
             level: 2,
+            programme: "BCNS",
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Mustafa Sayedgotb Mustafa Elrashied",
-            title: "",
+            title: "Design and development of self localisation strategy for a collaborative mobile robot system in an indoor environment",
             level: 2,
+            programme: "BEEE"
             period: [new Date(2025, 3, 1)]
           },
           {
             name: "Cheah Chin Hong",
-            title: "",
+            title: "Data-Driven Scheduling and Resource Allocation System",
             level: 1,
-            period: [new Date(2025, 3, 1)]
+            programme: "MDS",
+            period: [new Date(2025, 4, 1)]
           },
           {
             name: "Ng Shi Yin",
-            title: "",
+            title: "Energy Consumption Optimization in Smart Buildings Using Machine Learning",
             level: 1,
-            period: [new Date(2025, 3, 1)]
+            programme: "MDS",
+            period: [new Date(2025, 4, 1)]
+          },
+          {
+            name: "Loi Hean Ding",
+            title: "Optimizing Credit Card Customer Retention using Data-Driven Insights",
+            level: 1,
+            programme: "MDS",
+            period: [new Date(2024, 8, 1), new Date(2024, 11, 1)]
+          },
+          {
+            name: "Pang Teik Soon",
+            title: "Smart IoT-Biofloc Water Management System with Machine Learning",
+            level: 1,
+            programme: "MDS",
+            period: [new Date(2023, 8, 1), new Date(2023, 11, 1)]
           },
           {
             name: "Raveesh Shibchurn",
-            title: "",
+            title: "From Awareness to Adoption: Designing an AI Technology Adoption Framework for Residential Energy Efficiency in Malaysia",
             level: 1,
+            programme: "MSDM",
             period: [new Date(2025, 3, 1)]
           },
         ],
